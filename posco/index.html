@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posco</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!--navbar that only is visible on tablet and desktop web-->
+    <header>
+        <img src="logo.svg" alt="" id="logo">
+        <nav class="navbar">
+            <!--all the hrefs in the navbar are dying links so if u click on the links it wouldnt actually go anywhere-->
+            <ul>
+                <li ><a href="#">Goals</a></li>
+                <li ><a href="#">Benefits</a></li>
+                <li ><a href="#">Testimonials</a></li>
+                <li ><a href="#">Instructor</a></li>
+            </ul>
+        </nav>
+        <a href="#" ><button class="cta">Sign Up</button></a>
+        <a href="#" class="menuBtn">
+            <button onclick="openMenu()" id="openbtn">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </button>
+        </a>
+    </header>
+    <!--navbar that only is visible on mobile web-->
+    <div id="nav" style="height: 100%;width: 0%;">
+        <button id="clsbtn" onclick="closeMenu()">
+            <img src="close.svg" class="clsbtn">
+        </button>
+        <!--all these hrefs are also dying links-->
+        <ul>
+            <li><a href="">Goals</a></li>
+            <br>
+            <li><a href="">Benefits</a></li>
+            <br>
+            <li><a href="">Testimonials</a></li>
+            <br>
+            <li id="instructor"><a href="">Instructor</a></li>
+        </ul>
+    </div>
+    <img src="Illustration.svg" alt="a female person holding a plant" class="mainImg">
+    <!--main section of website where h1 and email input fields are-->
+    <div class="main">
+        <h1>The New Way Of <br> Planting.</h1>
+        <h2>Learn the new method for urban<br> and modern planting.</h2>
+        <!--i already put the method to get so when u submit ur email address it will put ur email address on the url-->
+        <form method="GET">
+            <img src="Message Icon.svg" id="emailIcon">
+        
+            <textarea type="email" id="form" name="email" placeholder="Enter your email address here" ></textarea>
+        
+            <button class="submit">Submit</button>
+            
+        </form>
+    </div>
+    <!--footer and star rating-->
+    <footer>
+        <!--this also uses get method so if u star and rate the amount
+         of star is uploaded to the url(email and star rating dont work simultaneously)-->
+        <form method="GET" id="star">
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+            </div>
+            <button id="starr">rate this class</button>
+        </form>
+        <!--i didnt add any hrefs coz u didnt even design one, so if u wanna make another page u can use my code as a framework:)-->
+        <span>Based On 1000+ <a href="">Testimonials</a></span>
+    </footer>
+    <!--designed by: ig: @dominggomau 
+        developed by: ig: @duta3135-->
+</body>
+</html>

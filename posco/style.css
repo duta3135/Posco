@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(356, 61%, 96%);
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+/*for the header and navbar(desktop and tablet)*/
+.menuBtn{
+    margin-right: 20px;
+}
+
+button{
+    border: none;
+}
+#logo{
+    width: 100px;
+    margin: 0px auto 0px 50px;
+}
+h1{
+    font-size: 55px;
+    margin: 50px 0px 0px 50px;
+}
+h2{
+    margin: 10px 50px;
+    color: hsla(0, 10%, 37%, 0.75);
+}
+header{
+    margin-top: 10px;
+    display: flex;
+    
+}
+#nav{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    margin-left: auto;
+    top: 0;
+    right: 0;
+    background: rgba( 255, 255, 255, 0.20 );
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 112, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    opacity: .85;
+    font-size: 20px;
+    text-align: end;
+    padding-top: 16px;
+    transition: 0.4s;
+    
+}
+li, a, button{
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    
+}
+li, a{
+    color: black;
+    margin: 10px 15px;
+    margin-left: 0;
+}
+
+.cta{
+    border: none;
+    margin-right: 20px;
+    height: 35px;
+    width: 100px;
+    color: #fff;
+    border-radius: 70px;
+    background-color: #F45C74;
+    box-shadow: 4px 4px 7px rgb(198, 196, 196);
+    transition: 0.3s;
+}
+.cta:hover{
+    box-shadow: 0px 5px 7px rgb(177, 177, 177);
+}
+/* #openbtn, .clsbtn, and #bar1-3 is a navbar only for mobile(screen-width:425px>)*/
+#openbtn{position: relative;}
+
+.clsbtn{
+    width: 36px;
+    top: -10em;
+    margin-right: 5px;
+}
+
+#bar1, #bar2, #bar3{
+    width: 7px;
+    height: 7px;
+    border-radius: 3px;
+    margin: 0px 0px 5px 10px;
+    background-color: #320d0d;
+    outline: none;
+    
+}
+
+/*input field for email address*/
+
+#form{
+    width: 445px;
+    height: 45px;
+    border-radius: 5px;
+    font-weight: 700 ;
+    font-size: 16px;
+    border-width: 0px 0px 0px 10px;
+    border-color: #fff #fff #fff  #9656ff;
+    box-shadow: 3px 3px 9px rgb(198, 197, 197);
+    margin-left: 50px;
+    display: flex;
+    outline: none;
+    text-align: start;
+    position: relative;
+    resize: none;
+    line-height: 45px;
+    background-color: white;
+    overflow: hidden;
+    padding-left: 40px;
+    transition: 0.3s;
+}
+#form:focus{
+    box-shadow: 2px 7px 9px rgb(200, 199, 201);
+}
+#emailIcon{
+    position: absolute;
+    padding-left: 70px;
+    padding-top: 10PX;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.submit{
+    width: 169px;
+    height: 53px;
+    font-size: 20px ;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background-color: #F45C74;
+    margin: 25px 50px;
+    box-shadow: 4px 5px 8px rgb(201, 199, 199);
+    transition: 0.3s;
+}
+.submit:hover{
+    box-shadow: 1px 6px 7px rgb(177, 176, 176);
+}
+/*rating system(i didn't do any backend; and the submit 
+button for the email and the rates are different)*/
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 0 0 45px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+footer{
+    display: inline-block;
+    font-weight: 200;
+}
+span a{
+    display: inline;
+    line-height: 47px;
+    color: rgb(23, 166, 255);
+    font-weight: 500;
+    
+}
+span{
+    margin-left: 50px;
+}
+#star{
+    display: flex;
+}
+/*.mainImg is for the illustration of a women holding plant*/
+.mainImg{
+    position: absolute;
+    left: 55%;
+    right: 15%;
+    top: 16%;
+    bottom: 27%;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*all the code from this line onwards is used to make the webpage responsive*/
+    /*tablet*/
+    @media only screen and (max-width: 768px) {
+        *{
+            size: 75%;
+            margin: 0;
+            
+            padding: 0;
+            background-color: hsl(356, 61%, 96%);
+            font-family: 'Nunito', sans-serif;
+        }
+        #emailIcon{
+            position: absolute;
+            padding-left: 40px;
+            padding-top: 10PX;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .mainImg{
+            position: absolute;
+        left: 60%;
+        right: 5%;
+        top: 16%;
+        bottom: 27%;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0);
+        }
+        header{
+            margin-top: 10px;
+            display: flex;
+        }
+        
+        
+        li, a, button{
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            
+        }
+        li, a{
+            color: black;
+            margin: 10px 4px;
+            margin-left: 0;
+        }
+        .cta{
+            border: none;
+            margin-right: 0px;
+            height: 35px;
+            width: 100px;
+            color: #fff;
+            border-radius: 70px;
+            background-color: #F45C74;
+        }
+        
+        #form{
+            width: 405px;
+            height: 45px;
+            
+            border-radius: 5px;
+            font-weight: 700 ;
+            font-size: 16px;
+            border-width: 0px 0px 0px 10px;
+            border-color: #fff #fff #fff  #9656ff;
+            ;
+            box-shadow: 3px 3px 9px rgb(233, 233, 233);
+            margin-left: 20px;
+            display: flex;
+            outline: none;
+            text-align: start;
+        }
+        #logo{
+            width: 100px;
+            margin: 0px auto 0px 20px;
+        }
+        h1{
+            font-size: 45px;
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+        h2{
+            margin: 10px 20px;
+            color: hsla(0, 10%, 37%, 0.75);
+        }
+        .submit{
+            width: 169px;
+            height: 53px;
+            font-size: 20px ;
+            border-radius: 10px;
+            color: #fff;
+            border: none;
+            background-color: #F45C74;
+            
+            margin: 25px 20px;
+            box-shadow: 4px 5px 8px rgb(201, 199, 199);
+        }
+        .cta{
+            margin-right: 30px;
+        }
+        span{
+            margin-left: 20px;
+        }
+        .rate{
+            padding: 0 0 0 15px;
+        }
+        
+    }
+    /*mobile L(425px)*/
+    @media only screen and (max-width: 426px) {
+        .mainImg{
+            margin-top: 400px;
+            left: 29%;
+        }
+        #logo{
+            margin-right: auto;
+            width: 100px;
+        }
+        nav{
+            display: none;
+        }
+        .cta{
+            margin-right: 0px;
+        }
+        #form{
+            width: 270px;
+            height: 45px;
+            
+            border-radius: 5px;
+            font-weight: 700 ;
+            font-size: 14px;
+            border-width: 0px 0px 0px 10px;
+            border-color: #fff #fff #fff  #9656ff;
+            ;
+            box-shadow: 3px 3px 9px rgb(198, 197, 197);
+            margin-left: 20px;
+            display: flex;
+            outline: none;
+            text-align: start;
+        }
+    
+        h1{
+            font-size: 30px;
+            margin-left: 20px;
+            margin-top: 50px;
+        }
+        h2{
+        font-size: 17px;
+            margin: 10px 20px;
+            color: hsla(0, 10%, 37%, 0.75);
+        }
+        .submit{
+            width: 169px;
+            height: 53px;
+            font-size: 20px ;
+            border-radius: 10px;
+            border: none;
+            color: #fff;
+            background-color: #F45C74;
+            
+            margin: 25px 20px;
+            box-shadow: 4px 5px 8px rgb(201, 199, 199);
+        }
+    }
+    /*Mobile M<33*/
+    @media only screen and (max-width: 375px){
+        .mainImg{
+            width: 250px;
+            top: 24%;
+            left: 25%;
+            right: 50%;
+        }
+        .submit{
+            width: 169px;
+            height: 53px;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+            color: #fff;
+            background-color: #F45C74;
+            
+            margin: 25px 20px;
+            box-shadow: 4px 5px 8px rgb(201, 199, 199);
+        }
+    }
+    /*Mobile S:)*/
+    @media only screen and (max-width: 320px){
+        .mainImg{
+            left: 19%;
+        }
+        
+    }
+    /*getting rid of menu bar coz we dont need them anymore:)*/
+    @media only screen and (min-width: 426px) {
+        .menuBtn{
+            display: none;
+        }
+        #nav{
+            display: none;
+        }
+        
+    }
+    /*Laptop L*/
+    @media only screen and (max-width: 1441px) {
+        .cta{
+            margin-right: 40px;
+        }
+    }
